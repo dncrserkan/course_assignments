@@ -1,0 +1,40 @@
+These are same soluions with JOIN method
+
+-- 6.sql
+SELECT AVG(rating) FROM ratings
+JOIN movies ON movies.id=ratings.movie_id
+WHERE year = 2012;
+
+-- 8.sql
+SELECT name FROM people
+JOIN stars ON people.id = stars.person_id
+JOIN movies ON stars.movie_id = movies.id
+WHERE movies.title = "Toy Story";
+
+-- 9.sql
+SELECT distinct name FROM people
+JOIN stars ON people.id = stars.person_id
+JOIN movies ON movies.id = stars.movie_id
+WHERE movies.year = 2004
+ORDER BY people.birth;
+    -- time with selection  ->  4.165 - 0.921 - 0.593
+    -- time with JOIN       -> 10.077 - 2.002 - 5.484
+
+-- 10.sql
+SELECT name FROM people
+JOIN directors ON directors.person_id = people.id
+JOIN movies ON directors.movie_id = movies.id
+JOIN ratings on movies.id = ratings.movie_id
+WHERE rating >= 9;
+    -- time with selection  ->  0.810 - 0.203 - 0.171
+    -- time with JOIN       -> 3.166 - 0.781 - 1.578
+
+-- 11.sql 
+SELECT title FROM movies
+JOIN stars on stars.movie_id = movies.id
+JOIN people on people.id = stars.person_id
+JOIN ratings on movies.id = ratings.movie_id
+WHERE people.name = 'Chadwick Boseman'
+ORDER by rating DESC LIMIT 5;
+    -- time with selection  -> 0.285 - 0.250 - 0.031
+    -- time with JOIN       -> 6.746 - 1.906 - 4.843

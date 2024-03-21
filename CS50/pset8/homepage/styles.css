@@ -1,0 +1,65 @@
+body {  background-image: url("./images/background.jpg");
+        background-size: 100%;
+}
+
+main > p {  color:aliceblue;
+            text-align: justify;
+            margin-left: 10rem;
+            margin-right: 10rem;
+            padding-top: 2rem;
+}
+
+
+footer {    position: absolute;
+            bottom: 0;
+            width: 100%;
+            color:#f0e68c;
+            text-align: center;
+            background-color: #f0f8ff60;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+}
+
+form {  margin-left: 10rem;
+        margin-top: 2rem;
+}
+
+
+input:focus {   border: 2px solid #007bff;
+                box-shadow: 0 0 5px #007bff;
+}
+input:focus-within {outline: none;}
+
+
+.navbar-expand-lg { background-image: url("./images/background.jpg");
+                    background-size: 100%;
+                    color: #f0f8ff; 
+}
+
+
+.navbar-nav a { font-weight: bold; 
+                color: #f0f8ff; 
+}
+
+
+.navbar-nav a:hover {   font-weight: bold; 
+                        color: #f0e68c; 
+}
+
+
+.card-body {box-shadow: black;}
+
+.card-body > .btn { float: right;
+                    margin-right: 1rem;
+}
+
+
+
+
+
+
+
+#part_id {  color:#f0f8ff;
+            margin-left: 10rem;
+            margin-top: 2rem;
+}

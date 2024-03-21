@@ -1,0 +1,3 @@
+Purpose of this txt file is test lines.py program.
+It should exit with sys.exit and provide an error message.
+- Not a Python file -

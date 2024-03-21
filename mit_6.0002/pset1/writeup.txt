@@ -1,0 +1,19 @@
+In the execution of ps1a.py with the input file ps1_cow_data.txt, 
+the following results were observed:
+
+    Number of trips using the greedy algorithm: 6
+    Time taken by the greedy algorithm: 0.0
+
+    Number of trips using the brute-force algorithm: 5
+    Time taken by the brute-force algorithm: 0.49683356285095215
+
+The dataset in ps1_cow_data.txt contains 10 elements. It's evident 
+that the greedy algorithm executes much faster than the brute-force 
+algorithm. Despite its speed, the greedy algorithm does not always 
+yield the optimal solution—in this case, the optimal solution is 5. 
+However, the greedy algorithm provides a close approximation at a 
+significantly faster pace.
+
+Conversely, the brute-force algorithm is slower, especially with 
+growing datasets. Nevertheless, it guarantees 100% accuracy in finding 
+the optimal solution.

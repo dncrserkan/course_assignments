@@ -1,0 +1,12 @@
+In ps3.py, there is a situation looks like buggy, but it is not.
+    When we run simulation for room dimensions 1x1 it start and never stop
+    like endless loop. But the reason is speed. In 1x1 room when your speed is 1
+    (even if it is smaller than one) our next target will be always out of the room.
+    Do notforget the startisng position is randomly choiced. For example:
+        starting position: 0.9, 0.9
+        speed: 0.11
+        direction: 0 degree
+            destination point will be: 1.01, 0.9 -> NOT IN THE ROOM
+
+    print ('avg time steps: ' + str(run_simulation(1, 1, 1, 1, 1, 1, 1.0, 50, StandardRobot)))
+    print ('avg time steps: ' + str(run_simulation(1, 0.005, 1, 1, 1, 1, 1.0, 50, StandardRobot)))

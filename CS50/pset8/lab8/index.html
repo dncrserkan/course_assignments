@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let correct = document.querySelector('.correct');
+                correct.addEventListener('click', function(){
+                    correct.style.backgroundColor = 'MediumSeaGreen';
+                    document.querySelector('#feedback1').innerHTML = 'Correct';
+                });
+                let incorrects = document.querySelectorAll('.incorrect');
+                for (let i = 0; i < incorrects.length; i++) {
+                    incorrects[i].addEventListener('click', function() {
+                        incorrects[i].style.backgroundColor = 'Tomato';
+                        document.querySelector('#feedback1').innerHTML = 'Incorrect';
+                    });
+                }
+
+                document.querySelector('#check').addEventListener('click', function() {
+                    let input = document.querySelector('input');
+                    if (input.value === 'Aerographene') {
+                        input.style.backgroundColor = 'MediumSeaGreen';
+                        document.querySelector('#feedback2').innerHTML = 'Correct';
+                    } 
+                    else {
+                        input.style.backgroundColor = 'Tomato';
+                        document.querySelector('#feedback2').innerHTML = 'Incorrect';
+                    }
+                });
+            });
+            
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>Which team do I support?</h3>
+                <button id="rm" class="incorrect"><img src="./logos/rm.png" height="17"> Real Madrid</button>
+                <button id="mc" class="incorrect"><img src="./logos/mc.png" height="17"> Manchester City</button>
+                <button id="bjk" class="correct"><img src="./logos/bjk.png" height="17"> Beşiktaş</button>
+                <button id="bm" class="incorrect"><img src="./logos/bm.png" height="17"> Bayern München</button>
+                <button id="psg" class="incorrect"><img src="./logos/psg.png" height="17"> Paris Saint-Germain</button>
+                <p id="feedback1"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>What is the world's lightest material?</h3>
+                <input type="text"></input>
+                <button id="check">Check Answer</button>
+
+                <p id="feedback2"></p>
+            </div>
+        </div>
+    </body>
+</html>

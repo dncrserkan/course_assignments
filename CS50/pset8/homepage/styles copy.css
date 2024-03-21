@@ -1,0 +1,39 @@
+body {  background-image: url("./images/background.jpg");
+        background-size: 100%;
+}
+
+p { color:aliceblue;
+    margin-left: 10em;
+    margin-right: 10em;
+}
+
+footer {    color:#000000;
+            text-align: center;
+            background-color: #f0f8ff60;
+            padding-top: 20px;
+            padding-bottom: 10px;
+            padding-right: 2rem;
+            margin-top: 50px;
+}
+
+
+.navbar {   font-weight: bold;
+            color:#ffffff60;
+}
+
+.bg-transparent {  background-color: #f0f8ff60 !important; }
+
+
+.card-body > .btn  {   float: right; 
+                    margin: 1rem ;
+}
+
+
+.card-text  {   color: black;
+                padding: 1rem;
+                margin: 1rem;
+}
+
+
+
+

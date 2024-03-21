@@ -1,0 +1,25 @@
+We can characterize people's audio auras by looking at the properties of their top 100 songs. 
+The simplest way to do this is to take the average of some of the songs' properties, such as 
+danceability, energy, loudness, speechiness, valence, and tempo. We can then assume that the 
+person's audio aura is these averages, respectively.
+
+However, there are some problems with this assumption. First, we do not include the standard 
+deviation in our calculations. This means that we are not taking into account how much the 
+person's listening habits vary. For example, if a person listens to a lot of one music genre, 
+but also listens to a few songs from other genres, their audio aura will be biased towards the 
+genre they listen to most. To address this problem, we could give more weight to the properties 
+of songs that the person listens to more often. For example, if a person listens to more low-valence 
+music than high-valence music, we could give the valence property a higher weight when calculating 
+their audio aura.
+
+Second, we only consider the person's top 100 songs in our calculations. This means that we are 
+ignoring all of the other songs that the person listens to. While this is a good way to save data, 
+it is not very accurate. To improve the accuracy of our calculations, we could add more data columns 
+to our database, such as the number of times each song has been listened to and the time of day when 
+each song was listened to. With this additional data, we could calculate the user's audio aura more 
+precisely.
+
+In conclusion, while the simple way of calculating a person's audio aura by taking the average of 
+their top 100 songs is a good starting point, there are some ways to improve the accuracy of the 
+calculation. By including the standard deviation in our calculations and by considering all of the 
+songs that the person listens to, we can get a more accurate picture of their audio aura.

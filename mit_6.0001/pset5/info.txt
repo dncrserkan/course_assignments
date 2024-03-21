@@ -1,0 +1,25 @@
+feedparser.py
+	line 93 - 94 | CHANGED
+			# _base64decode = getattr(base64, 'decodebytes', base64.decodestring)       # THIS LINE IS CHANGED WITH BELOW
+			_base64decode = getattr(base64, 'decodebytes', base64.decodebytes)
+
+	line 3656 - 3657	| CHANGED
+        	# if isinstance(proposed_encoding, collections.Callable):   # THIS LINE IS CHANGED WITH BELOW
+        	if isinstance(proposed_encoding, collections.abc.Callable):
+
+
+The FeedParser won't work correctly because Yahoo's RSS feed no longer includes descriptions. 
+This will cause you to get the error: object has no attribute 'description'.
+You can fix this by commenting out the following line : 
+	stories.extend(process("http://news.yahoo.com/rss/topstories"))
+in the main_thread function in the ps5.py file.
+
+
+ps5_test.py
+	line 249 - 250 - 251 | CHECK FIRST if error occurs
+
+
+
+----------
+for Linux systems
+	sudo apt-get install python3-tk

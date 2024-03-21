@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+<table class="table">
+    <thead>
+        <tr>
+            <th class="text-start">Symbol</th>
+            <th class="text-end">Shares</th>
+            <th class="text-end">Price</th>
+            <th class="text-end">Type</th>
+            <th class="text-end">Transacted</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in items %}
+            <tr>
+                {% if item[3] == "Sell" %}
+                    {% set color = "red" %}
+                {% else %}
+                    {% set color= "black" %}
+                {% endif %}
+
+                <td class="text-start" style="color: {{color}};">{{ item[0] }}</td>
+                <td class="text-end" style="color: {{color}};">{{ item[1] }}</td>
+                <td class="text-end" style="color: {{color}};">${{ "{:.2f}".format(item[2]) }}</td>
+                <td class="text-end" style="color: {{color}};">{{ item[3] }}</td>
+                <td class="text-end" style="color: {{color}};">{{ item[4] }}</td>
+            </tr>   
+        {% endfor %}     
+    </tbody>
+</table>
+{% endblock %}
