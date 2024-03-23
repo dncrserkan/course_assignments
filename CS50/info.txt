@@ -1,2 +1,5 @@
+All required files available in course web site.
+	https://cs50.harvard.edu/x/2023/
+
 While CS50 begins with instruction in C language, I've opted to solve the problems using Python.
 
