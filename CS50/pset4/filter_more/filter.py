@@ -36,7 +36,7 @@ def main():
     try:
         inptr = open(infile, "rb")
     except FileNotFoundError:
-        print("{} file don't exist".format(infile))
+        print("{} file doesn't exist".format(infile))
         sys.exit(4)
     
     try:

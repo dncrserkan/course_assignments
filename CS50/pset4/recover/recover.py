@@ -11,7 +11,7 @@ def main():
     try:
         infile = open(sys.argv[1], "rb")
     except:
-        print("File can not be opened.")
+        print("File could not be opened.")
         sys.exit(1)
 
     
@@ -47,7 +47,7 @@ def main():
                     outfile = open(name_outfile, "wb")
                     is_file_writing = True # File is in writing process now
                 except:
-                    print(f"{name_outfile} file cannot be opened")
+                    print(f"{name_outfile} file could not be opened")
                     sys.exit(1)
                 
                 # Write data block in outfile
@@ -71,7 +71,7 @@ def main():
                     outfile = open(name_outfile, "wb")
                     is_file_writing = True # New file is in writing process now
                 except:
-                    print(f"{name_outfile} file connot be opened")
+                    print(f"{name_outfile} file could not be opened")
                     sys.exit(1)
                 
                 # Write data block in outfile
